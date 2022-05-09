@@ -49,10 +49,24 @@ void filetime2(){
 
 //두 개의 파일 크기를 비교하는 함수 작성
 void sizecmp(){
+    int size1 = (int)stat1.st_size;
+    int size2 = (int)stat2.st_size;
+    
+    printf("size compare\n");
+    if (size1 < size2) printf("The file size of the test2 file is bigger.\n\n");
+    else if (size1 > size2) printf("The file size of the test1 file is bigger.\n\n");
+    else printf("sizes is equal.\n\n");
 }
 
 //두 개의 파일 블락 수를 비교하는 함수 작성
 void blockcmp(){
+    int block1 = (int)stat1.st_blocks;
+    int block2 = (int)stat2.st_blocks;
+    
+    printf("block compare\n");
+    if (block1 < block2) printf("The number of blocks in test2 file is bigger.\n\n");
+    else if (block1 > block2) printf("The number of blocks in test1 file is bigger.\n\n");
+    else printf("The number of blocks is equal.\n\n");
 }
 
 //두 개의 파일 수정 날짜를 비교하는 함수 작성
@@ -64,7 +78,6 @@ void datecmp(){
     if (date1 < date2) printf("file1 is early.\n\n");
     else if (date1 > date2) printf("file2 is early.\n\n");
     else printf("same date.\n\n");
-    
 }
 
 //두 개의 파일 수정 시간을 비교하는 함수 작성
