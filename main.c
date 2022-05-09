@@ -59,11 +59,12 @@ void blockcmp(){
 void datecmp(){
     int date1 = (time1.tm_mon + 1) * 100 + time1.tm_mday;
     int date2 = (time2.tm_mon + 1) * 100 + time2.tm_mday;
-    
+
     printf("date compare\n");
     if (date1 < date2) printf("file1 is early.\n\n");
     else if (date1 > date2) printf("file2 is early.\n\n");
     else printf("same date.\n\n");
+    
 }
 
 //두 개의 파일 수정 시간을 비교하는 함수 작성
