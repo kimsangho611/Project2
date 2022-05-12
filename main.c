@@ -53,8 +53,8 @@ void sizecmp(){
     int size2 = (int)stat2.st_size;
     
     printf("size compare\n");
-    if (size1 < size2) printf("The file size of the test2 file is bigger.\n\n");
-    else if (size1 > size2) printf("The file size of the test1 file is bigger.\n\n");
+    if (size1 < size2) printf("The file size of the text2 file is bigger.\n\n");
+    else if (size1 > size2) printf("The file size of the text1 file is bigger.\n\n");
     else printf("sizes is equal.\n\n");
 }
 
@@ -64,8 +64,8 @@ void blockcmp(){
     int block2 = (int)stat2.st_blocks;
     
     printf("block compare\n");
-    if (block1 < block2) printf("The number of blocks in test2 file is bigger.\n\n");
-    else if (block1 > block2) printf("The number of blocks in test1 file is bigger.\n\n");
+    if (block1 < block2) printf("The number of blocks in text2 file is bigger.\n\n");
+    else if (block1 > block2) printf("The number of blocks in text1 file is bigger.\n\n");
     else printf("The number of blocks is equal.\n\n");
 }
 
@@ -86,7 +86,7 @@ void timecmp(){
     int file_time2 = (time2.tm_hour * 10000) + (time2.tm_min * 100) + time2.tm_sec;
 
     printf("time compare\n");
-    if (file_time1 < file_time2) printf("The test1 file is early.\n\n");
-    else if (file_time1 > file_time2) printf("The test2 file is early.\n\n");
+    if (file_time1 < file_time2) printf("The text1 file is early.\n\n");
+    else if (file_time1 > file_time2) printf("The text2 file is early.\n\n");
     else printf("same time.\n\n");
 }
